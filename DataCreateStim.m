@@ -31,8 +31,6 @@ CDL=  squareform(subject_distance(1,:));
 CDL = ceil(CDL/10);
 CDL (isnan(CDL))=0 ;
 
-
-
 d1 = zeros(19,1);
 d2 = zeros(19,246);
 d = zeros(246,1);
@@ -44,6 +42,5 @@ WStim = cell(4,1);
  WStim(4,1) = {W2};
  filename1 = ['WithStim' num2str(n)];
 save(filename1,'WStim','d1','d2','d','CDL');
-
 
 end
