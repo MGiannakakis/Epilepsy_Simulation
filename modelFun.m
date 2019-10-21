@@ -14,15 +14,14 @@ u_s=3.7;%Sigmoid constant theta for inhibotory population 1
 u_d=3.7;% Sigmoid constant theta for inhibotory population 1
 
 t_e=0.025;% Excitatory time step
-t_s=0.025;% Inhibitory 1 time step
-t_d=0.025;% Inhibitory 2 time step
+t_s=0.05;% Inhibitory 1 time step
+t_d=0.05;% Inhibitory 2 time step
 
 
 W1 = param{1};%weights between regions
 CDL = param{4};%time delays
 stim = param{2}; %Stimulation on/off
 W2 = param{7};%weights within regions
-%W = [14.5; 12; 15; 14; 0; 20; 16; 8]; %Internal weights
 
 for  i = 1:82 
   C = 0;
