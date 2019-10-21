@@ -2,7 +2,6 @@
 function a = RunNoStim(t,n)
 
 %% Set up
-%options = odeset('InitialStep',1e-04,'MaxStep',0.001);
 options = optimoptions('patternsearch','UseParallel', true, 'UseCompletePoll', true, 'UseVectorized', true );
 modelHandle=@modelFun;
 
@@ -83,10 +82,8 @@ sol = dde23(modelHandle,delay,@history12,tRange,options, parameters);
     W2(4,s) = W2(4,s) + 0.05*d2(end,s)*(d2(end,s+82)- d2(max(size(d2,1)-1,1),s+82));
     W2(3,s) = W2(3,s) + 0.05*d2(end,s+164)*(d2(end,s)- d2(max(size(d2,1)-1,1),s));
     W2(6,s) = W2(6,s) + 0.05*d2(end,s)*(d2(end,s+164)- d2(max(size(d2,1)-1,1),s+164));
-    
-    
-    
 end
+
 w1 = sum (W1,1); %Normalising weights
 W1 = rdivide(W1,w1);
 
@@ -104,10 +101,6 @@ W2(6,:) = stab* W2(6,:)./ h;
           W1(l,k)=w;
       end
  end
- 
-end 
-   
-%% 
-%toc   
+end 0000000000  
 save(filename,'NoStim','d1','d2','d','CDL');
 end
