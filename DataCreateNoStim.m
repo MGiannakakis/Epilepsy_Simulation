@@ -31,12 +31,9 @@ CDL=  squareform(subject_distance(n,:));
 CDL = ceil(CDL/10);
 CDL (isnan(CDL))=0 ;
 
-
-
 d1 = zeros(19,1);
 d2 = zeros(19,246);
 d = zeros(246,1);
-
 
 NoStim = cell(4,1);
 NoStim(1,1) = {W1}; % Weights
