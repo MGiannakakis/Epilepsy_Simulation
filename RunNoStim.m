@@ -101,6 +101,6 @@ W2(6,:) = stab* W2(6,:)./ h;
           W1(l,k)=w;
       end
  end
-end 0000000000  
+end   
 save(filename,'NoStim','d1','d2','d','CDL');
 end
