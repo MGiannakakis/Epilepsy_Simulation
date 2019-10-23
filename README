@@ -1,1 +1,3 @@
-
+The simulations run for each subject from the Run.m file.
+The index n determines the patient number from which the initial connectivity is derived. It cannot be shared here as it is considered sensitive 
+medical data, but it was given as a vector of connection strenghts between regions.
